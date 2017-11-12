@@ -19,15 +19,11 @@ the reddit data array and picks the peices of informaiton specified in each
 component.*/
 
      const listItems = this.props.posts.map((post) => (
-        <div className="List">
             <List post={post} key={post.author}/>
-        </div>
       ));
 
       const gridItems = this.props.posts.map((post) => (
-         <div className="Grid">
              <Grid post={post} key={post.author}/>
-         </div>
       ));
 
 // To get the links to work, they must be apart of the return f(x).
@@ -50,13 +46,19 @@ component.*/
 
 {/* The Route below sets places the infrormation on the page in a div and uses the constant created
 above to grab the data from the specified components*/}
+            <Route exact path="/" render={() => (
+              <div className="welcome">
+                <h1>Welcome to Richmans Reddit</h1>
+                <iframe src="https://giphy.com/gifs/l378dzpRIoeLUckRq/html5" className="giphy-embed"></iframe>
+              </div>
+              )}/>
               <Route path="/Grid" render={() => (
                 <div className="Grid">
                   {gridItems}
                 </div>
                 )}/>
               <Route path="/List" render={() => (
-                <div className="List">
+                <div>
                   {listItems}
                 </div>
                 )}/>

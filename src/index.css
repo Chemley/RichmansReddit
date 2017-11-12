@@ -2,4 +2,68 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: aquamarine;
+}
+
+header, h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.giphy-embed {
+  margin:0;
+  border: 2px solid black;
+  width: 480px;
+  height: 480px;
+}
+
+/*Grid view styles*/
+.Grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  width: 750px;
+}
+
+.Image {
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+/*List view styles*/
+.List {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  border-bottom: 2px solid orange;
+}
+
+.image {
+  border: 2px solid black;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 8px 5px 8px;
+  order: -1;
+}
+
+.title {
+}
+
+.author {
+  margin: 0 auto;
+}
+
+.author::before {
+  content: 'submitted by: ';
 }
