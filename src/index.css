@@ -10,6 +10,7 @@ header, h1 {
   margin: 10px;
 }
 
+/*Welcome page styles*/
 .welcome {
   display: flex;
   align-items: center;
