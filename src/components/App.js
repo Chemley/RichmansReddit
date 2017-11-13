@@ -35,9 +35,10 @@ component.*/
 
 {/* The Links below set up the links to the different pages */}
             Which view would you like?: {' '}
+              <Link to="/">Welcome Page</Link>{' '}
               <Link to="/Grid">Grid View</Link>{' '}
-              <Link to="/List">List View</Link>{' '}
-              <Link to="/">Welcome Page</Link>
+              <Link to="/List">List View</Link>
+
             </header>
           <div>
 
