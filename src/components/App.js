@@ -1,8 +1,8 @@
 // The imports below are the files needed to make App.js work.
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Grid from './Grid'
-import List from './List'
+import Grid from './Grid';
+import List from './List';
 // This chain of files makes the Router tags work.
 import {
         BrowserRouter as Router,
@@ -18,13 +18,14 @@ class App extends Component {
 the reddit data array and picks the peices of informaiton specified in each
 component.*/
 
-     const listItems = this.props.posts.map((post) => (
-            <List post={post} key={post.author}/>
-      ));
+     // // const listItems = this.props.posts.map((post) => (
+     // //        <List post={post} key={post.author}/>
+     //  ));
+            console.log(posts);
+      const gridItems = this.props.posts.map((post) => {
 
-      const gridItems = this.props.posts.map((post) => (
-             <Grid post={post} key={post.author}/>
-      ));
+            return <Grid post={post} key={post.data.childern.data.id}/>
+      });
 
 // To get the links to work, they must be apart of the return f(x).
    return (
@@ -60,7 +61,7 @@ above to grab the data from the specified components*/}
                 )}/>
               <Route path="/List" render={() => (
                 <div>
-                  {listItems}
+                  {/* {listItems} */}
                 </div>
                 )}/>
               <Redirect to="/" />

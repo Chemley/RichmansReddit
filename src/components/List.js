@@ -20,6 +20,6 @@ class List extends Component {
 function mapStateToProps(state) {
     return {
         posts: state.posts
-    }
+    };
 }
 export default connect(mapStateToProps)(List);
