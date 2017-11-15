@@ -21,11 +21,10 @@ component.*/
      // // const listItems = this.props.posts.map((post) => (
      // //        <List post={post} key={post.author}/>
      //  ));
-            console.log(posts);
-      const gridItems = this.props.posts.map((post) => {
-
-            return <Grid post={post} key={post.data.childern.data.id}/>
-      });
+            console.log(this.props.posts);
+      const gridItems = this.props.posts.map((post) => (
+        <Grid post={post} key={post.data.childern.data.id}/>
+      ));
 
 // To get the links to work, they must be apart of the return f(x).
    return (
