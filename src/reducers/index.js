@@ -5,9 +5,9 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case "REQUEST_STARSHIPS":
+        case "REQUEST":
             return Object.assign({}, state, {
-                starships: [],
+                posts: [],
                 isLoading: true
             });
         case "RECEIVE":

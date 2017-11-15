@@ -9,10 +9,9 @@ export function fetchRedditData() {
         dispatch(requestRedditData());
         $.get("https://www.reddit.com/r/aww.json", function(data) {
             // Here is where we dig into the response JSON to find the data we actually need.
-            const redditData = data;
-            console.log(redditData);
-            dispatch(receiveRedditData(data));
-            console.log("B");
+            const posts = data.data.children.slice(1);
+            console.log(posts);
+            dispatch(receiveRedditData(posts));
         });
     }
 }
@@ -26,7 +25,6 @@ function requestRedditData() {
 
 // Allow the reducer to update the state when the request finishes and brings back data.
 function receiveRedditData(data) {
-  console.log("A")
     return {
         type: "RECEIVE",
         data

@@ -18,12 +18,11 @@ class App extends Component {
 the reddit data array and picks the peices of informaiton specified in each
 component.*/
 
-     // // const listItems = this.props.posts.map((post) => (
-     // //        <List post={post} key={post.author}/>
-     //  ));
-            console.log(this.props.posts);
-      const gridItems = this.props.posts.map((post) => (
-        <Grid post={post} key={post.data.childern.data.id}/>
+     const listItems = this.props.posts.map((post) => (
+          <List post={post} key={post.data.id}/>
+      ));
+      const gridItems = this.props.posts.map(post => (
+        <Grid post={post} key={post.data.id}/>
       ));
 
 // To get the links to work, they must be apart of the return f(x).
@@ -60,7 +59,7 @@ above to grab the data from the specified components*/}
                 )}/>
               <Route path="/List" render={() => (
                 <div>
-                  {/* {listItems} */}
+                  {listItems}
                 </div>
                 )}/>
               <Redirect to="/" />

@@ -8,18 +8,13 @@ class List extends Component {
     return (
       <div className="List">
           <div className="Text">
-            <a className="title" href={this.props.post.url}><h3>{this.props.post.title}</h3></a>
-            <p className= "author">{this.props.post.author}</p>
+            <a className="title" href={this.props.post.data.url}><h3>{this.props.post.data.title}</h3></a>
+            <p className= "author">{this.props.post.data.author}</p>
           </div>
-        <img className= "image" src={this.props.post.thumbnail} atl="thumbnail"/>
+        <img className= "image" src={this.props.post.data.thumbnail} atl="thumbnail"/>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-    return {
-        posts: state.posts
-    };
-}
-export default connect(mapStateToProps)(List);
+export default List;
