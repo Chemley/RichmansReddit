@@ -30,7 +30,7 @@ header, h1 {
   display: flex;
   flex-flow: row wrap;
   margin: 0 auto;
-  width: 750px;
+  width: 875px;
 }
 
 .Image {
