@@ -34,7 +34,7 @@ component.*/
 
 {/* The Links below set up the links to the different pages */}
             Which view would you like?: {' '}
-              <Link to="/">Welcome Page</Link>{' '}
+              <Link to="/Welcome">Welcome Page</Link>{' '}
               <Link to="/Grid">Grid View</Link>{' '}
               <Link to="/List">List View</Link>
 
@@ -46,7 +46,7 @@ component.*/
 
 {/* The Route below sets places the infrormation on the page in a div and uses the constant created
 above to grab the data from the specified components*/}
-            <Route exact path="/" render={() => (
+            <Route exact path="/Welcome" render={() => (
               <div className="welcome">
                 <h1>Welcome to Richmans Reddit</h1>
                 <iframe src="https://giphy.com/gifs/l378dzpRIoeLUckRq/html5" className="giphy-embed"></iframe>
@@ -62,7 +62,7 @@ above to grab the data from the specified components*/}
                   {listItems}
                 </div>
                 )}/>
-              <Redirect to="/" />
+              <Redirect to="/Welcome" />
             </Switch>
           </div>
       </div>
